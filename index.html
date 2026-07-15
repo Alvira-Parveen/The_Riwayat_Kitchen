@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Riwayat Kitchen — Home-Style Cloud Kitchen in Muzaffarpur</title>
+  <meta name="description"
+    content="Authentic home-cooked biryanis, kormas, burgers and more from Muzaffarpur, Bihar. Cooked with love, served with warmth. Order on Zomato, Swiggy or WhatsApp.">
+  <meta name="author" content="The Riwayat Kitchen">
+  <meta property="og:title" content="The Riwayat Kitchen">
+  <meta property="og:description" content="Cooked with Love, Served with Warmth — Muzaffarpur, Bihar.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --cream: #f7f4ed;
+      --cream2: #f0ead8;
+      --border: #eceae4;
+      --charcoal: #1c1c1c;
+      --muted: #5f5f5d;
+      --offwhite: #fcfbf8;
+      --maroon: #6b0f1a;
+      --gold: #c9982a;
+      --gold2: #e8b84b;
+      --inset: rgba(255, 255, 255, 0.2) 0 0.5px 0 0 inset,
+        rgba(0, 0, 0, 0.18) 0 0 0 0.5px inset,
+        rgba(0, 0, 0, 0.05) 0 1px 2px 0;
+    }
+
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    img {
+      display: block
+    }
+
+    button {
+      font-family: inherit
+    }
+
+    /* ===== NAV ===== */
+    .rk-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(247, 244, 237, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border)
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: opacity .2s
+    }
+
+    .nav-logo:hover {
+      opacity: .85
+    }
+
+    .nav-logo-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 0.5px solid var(--border);
+      object-fit: cover
+    }
+
+    .nav-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -.3px
+    }
+
+    .nav-logo-text em {
+      color: var(--maroon);
+      font-style: italic
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none
+    }
+
+    .nav-links a {
+      font-size: .82rem;
+      color: rgba(28, 28, 28, .65);
+      position: relative;
+      transition: color .2s ease;
+      padding-bottom: 2px
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 1.5px;
+      background: var(--maroon);
+      transition: width .25s ease, left .25s ease;
+      border-radius: 1px
+    }
+
+    .nav-links a:hover {
+      color: var(--maroon)
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+      left: 0
+    }
+
+    .nav-cta {
+      background: var(--charcoal);
+      color: var(--offwhite);
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-size: .82rem;
+      box-shadow: var(--inset);
+      transition: all .25s ease
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(28, 28, 28, .18), var(--inset);
+      background: #2a2a2a
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      padding: 110px 5% 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 45% at 78% 25%, rgba(201, 152, 42, .07) 0%, transparent 65%), radial-gradient(ellipse 45% 40% at 18% 75%, rgba(107, 15, 26, .05) 0%, transparent 60%);
+      pointer-events: none
+    }
+
+    .hero-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: center
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px
+    }
+
+    .hero-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: .8;
+      animation: pulse-dot 1.6s ease-in-out infinite
+    }
+
+    .hero-eyebrow span {
+      font-size: .72rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(28, 28, 28, .4)
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 4.5vw, 4rem);
+      font-weight: 600;
+      letter-spacing: -1.6px;
+      line-height: 1.06;
+      margin-bottom: 10px
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--maroon)
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin: 18px 0 34px;
+      font-weight: 300;
+      max-width: 400px
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--charcoal);
+      color: var(--offwhite);
+      padding: 11px 20px;
+      border-radius: 6px;
+      font-size: .85rem;
+      box-shadow: var(--inset);
+      transition: all .25s ease;
+      border: none;
+      cursor: pointer
+    }
+
+    .btn-dark:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(28, 28, 28, .18), var(--inset);
+      background: #2a2a2a
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: transparent;
+      color: var(--charcoal);
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: .85rem;
+      border: 1px solid rgba(28, 28, 28, .3);
+      transition: all .25s ease;
+      cursor: pointer
+    }
+
+    .btn-ghost:hover {
+      background: rgba(28, 28, 28, .04);
+      border-color: var(--maroon);
+      color: var(--maroon);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(107, 15, 26, .08)
+    }
+
+    .btn-zomato {
+      background: linear-gradient(135deg, #e23744, #cb202d);
+      color: #fff;
+      border: none
+    }
+
+    .btn-zomato:hover {
+      background: linear-gradient(135deg, #ef4552, #d92735);
+      box-shadow: 0 6px 20px rgba(226, 55, 68, .35), var(--inset);
+      color: #fff
+    }
+
+    .btn-swiggy {
+      background: linear-gradient(135deg, #fc8019, #e5701a);
+      color: #fff;
+      border: none
+    }
+
+    .btn-swiggy:hover {
+      background: linear-gradient(135deg, #ff8c2c, #f47b17);
+      box-shadow: 0 6px 20px rgba(252, 128, 25, .35), var(--inset);
+      color: #fff
+    }
+
+    .btn-wa {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff;
+      border: none
+    }
+
+    .btn-wa:hover {
+      background: linear-gradient(135deg, #2ee377, #14a08f);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, .35), var(--inset);
+      color: #fff
+    }
+
+    /* ORDER STRIP */
+    .order-strip {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px
+    }
+
+    .order-strip a {
+      flex: 1;
+      min-width: 180px;
+      padding: 13px 18px;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all .25s ease;
+      box-shadow: var(--inset)
+    }
+
+    /* HERO STATS */
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      margin-top: 44px;
+      padding-top: 28px;
+      border-top: 0.5px solid var(--border)
+    }
+
+    .stat-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -1px
+    }
+
+    .stat-l {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: 1px;
+      font-weight: 300
+    }
+
+    .hero-logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .logo-ring {
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      border: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: gentle-float 6s ease-in-out infinite
+    }
+
+    .logo-ring::after {
+      content: '';
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      border: 0.5px solid rgba(201, 152, 42, .18)
+    }
+
+    .logo-inner {
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 0.5px solid var(--border);
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .logo-inner img {
+      width: 92%;
+      height: 92%;
+      object-fit: contain
+    }
+
+    @keyframes gentle-float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-8px)
+      }
+    }
+
+    /* ===== SECTIONS ===== */
+    .rk-section {
+      padding: 88px 5%
+    }
+
+    .sec-inner {
+      max-width: 1140px;
+      margin: 0 auto
+    }
+
+    .eyebrow {
+      font-size: .7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(28, 28, 28, .38);
+      margin-bottom: 10px;
+      display: block
+    }
+
+    .sec-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -1.2px;
+      line-height: 1.05
+    }
+
+    .divider {
+      width: 36px;
+      height: 1.5px;
+      background: var(--border);
+      margin: 14px 0 36px
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      border-top: 0.5px solid var(--border)
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 72px;
+      align-items: start
+    }
+
+    .about-img {
+      aspect-ratio: 3/4;
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(201, 152, 42, .08), rgba(107, 15, 26, .06));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--maroon);
+      overflow: hidden;
+      position: relative
+    }
+
+    .about-img img {
+      width: 82%;
+      height: 82%;
+      object-fit: contain
+    }
+
+    .about-text blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.42rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.5;
+      border-left: 2px solid var(--border);
+      padding-left: 18px;
+      margin: 22px 0;
+      color: var(--charcoal)
+    }
+
+    .about-text p {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 14px;
+      font-weight: 300
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 22px
+    }
+
+    .chip {
+      background: var(--cream);
+      border: 0.5px solid var(--border);
+      border-radius: 9999px;
+      padding: 5px 13px;
+      font-size: .73rem;
+      color: rgba(28, 28, 28, .65);
+      transition: all .2s
+    }
+
+    .chip:hover {
+      background: rgba(201, 152, 42, .08);
+      border-color: rgba(201, 152, 42, .3);
+      color: var(--charcoal)
+    }
+
+    /* ===== MENU ===== */
+    #menu {
+      border-top: 0.5px solid var(--border)
+    }
+
+    .menu-pills {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-bottom: 36px
+    }
+
+    .pill {
+      background: var(--cream);
+      border: 0.5px solid var(--border);
+      border-radius: 9999px;
+      padding: 6px 15px;
+      font-size: .78rem;
+      cursor: pointer;
+      transition: all .15s;
+      color: rgba(28, 28, 28, .7);
+      box-shadow: var(--inset)
+    }
+
+    .pill.on {
+      background: var(--maroon);
+      color: var(--offwhite);
+      border-color: var(--maroon)
+    }
+
+    .pill:hover:not(.on) {
+      background: rgba(28, 28, 28, .04)
+    }
+
+    .menu-section {
+      margin-bottom: 48px
+    }
+
+    .menu-section-hdr {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px
+    }
+
+    .menu-section-hdr h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -.3px
+    }
+
+    .menu-section-line {
+      flex: 1;
+      height: 0.5px;
+      background: var(--border)
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+      gap: 14px
+    }
+
+    /* MENU CARD */
+    .mcard {
+      background: var(--cream);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      cursor: pointer
+    }
+
+    .mcard:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(28, 28, 28, .1), 0 2px 8px rgba(28, 28, 28, .06);
+      border-color: rgba(201, 152, 42, .4)
+    }
+
+    .mcard-img {
+      height: 156px;
+      background: linear-gradient(135deg, rgba(201, 152, 42, .08), rgba(107, 15, 26, .05));
+      border-bottom: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: background .2s;
+      position: relative
+    }
+
+    .mcard:hover .mcard-img {
+      background: linear-gradient(135deg, rgba(201, 152, 42, .15), rgba(107, 15, 26, .08))
+    }
+
+    .mcard-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease
+    }
+
+    .mcard:hover .mcard-img img {
+      transform: scale(1.06)
+    }
+
+    .mcard-img .placeholder-icon {
+      font-size: 2.4rem;
+      opacity: .35
+    }
+
+    .mcard-body {
+      padding: 14px 16px 17px;
+      transition: background .2s
+    }
+
+    .mcard:hover .mcard-body {
+      background: rgba(201, 152, 42, .03)
+    }
+
+    .mcard-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 4px;
+      transition: color .2s
+    }
+
+    .mcard:hover .mcard-name {
+      color: var(--maroon)
+    }
+
+    .mcard-sub {
+      font-size: .75rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 12px;
+      font-weight: 300
+    }
+
+    .mcard-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .mcard-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: color .2s
+    }
+
+    .mcard:hover .mcard-price {
+      color: var(--gold)
+    }
+
+    .mtag {
+      font-size: .62rem;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      border: 0.5px solid var(--border);
+      color: rgba(28, 28, 28, .45)
+    }
+
+    .mtag.veg {
+      background: rgba(34, 120, 57, .06);
+      color: #226039;
+      border-color: rgba(34, 120, 57, .18)
+    }
+
+    .mtag.hot {
+      background: rgba(107, 15, 26, .06);
+      color: var(--maroon);
+      border-color: rgba(107, 15, 26, .18)
+    }
+
+    .mtag.star {
+      background: rgba(201, 152, 42, .1);
+      color: #7a5800;
+      border-color: rgba(201, 152, 42, .3)
+    }
+
+    /* ADD-ONS */
+    .addon-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 0.5px solid var(--border);
+      font-size: .88rem;
+      transition: background .15s
+    }
+
+    .addon-row:hover {
+      background: rgba(201, 152, 42, .04);
+      border-radius: 6px
+    }
+
+    .addon-row:last-child {
+      border: none
+    }
+
+    .addon-name {
+      color: var(--charcoal)
+    }
+
+    .addon-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: .95rem
+    }
+
+    .addon-wrap {
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 4px 16px;
+      margin-top: 4px
+    }
+
+    /* COMBOS */
+    .combo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 14px
+    }
+
+    .combo-card {
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      background: var(--cream);
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      cursor: pointer
+    }
+
+    .combo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(28, 28, 28, .09), 0 2px 6px rgba(28, 28, 28, .05);
+      border-color: rgba(201, 152, 42, .4)
+    }
+
+    .combo-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-bottom: 0.5px solid var(--border);
+      background: linear-gradient(135deg, #f5efe0, #ece3ca);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .combo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform .4s ease
+    }
+
+    .combo-card:hover .combo-img img {
+      transform: scale(1.04)
+    }
+
+    .combo-body {
+      padding: 16px 20px 18px
+    }
+
+    .combo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin-bottom: 5px
+    }
+
+    .combo-items {
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      font-weight: 300
+    }
+
+    .combo-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .combo-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600
+    }
+
+    .combo-savings {
+      font-size: .68rem;
+      color: #226039;
+      background: rgba(34, 120, 57, .07);
+      border: 0.5px solid rgba(34, 120, 57, .18);
+      border-radius: 9999px;
+      padding: 2px 9px
+    }
+
+    /* SPECIAL ORDERS BOX */
+    .special-orders {
+      margin-top: 32px;
+      padding: 24px 28px;
+      background: linear-gradient(135deg, rgba(201, 152, 42, .06), rgba(107, 15, 26, .04));
+      border: 0.5px solid rgba(201, 152, 42, .25);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden
+    }
+
+    .special-orders::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(201, 152, 42, .08);
+      pointer-events: none
+    }
+
+    .special-orders-text h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--charcoal)
+    }
+
+    .special-orders-text p {
+      font-size: .87rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.7
+    }
+
+    .special-orders-text strong {
+      color: var(--charcoal);
+      font-weight: 500
+    }
+
+    .special-orders-contact {
+      margin-top: 10px;
+      font-size: .85rem;
+      color: var(--charcoal);
+      line-height: 1.8
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      border-top: 0.5px solid var(--border)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start
+    }
+
+    .irow {
+      display: flex;
+      gap: 13px;
+      margin-bottom: 22px;
+      align-items: flex-start
+    }
+
+    .iicon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: rgba(28, 28, 28, .03);
+      border: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0
+    }
+
+    .iicon svg {
+      width: 17px;
+      height: 17px;
+      stroke: var(--muted);
+      fill: none;
+      stroke-width: 1.8
+    }
+
+    .ilbl {
+      font-size: .67rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(28, 28, 28, .32);
+      margin-bottom: 3px
+    }
+
+    .ival {
+      font-size: .9rem;
+      line-height: 1.5
+    }
+
+    .ival small {
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 300
+    }
+
+    .hours-box {
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 26px
+    }
+
+    .hours-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 18px
+    }
+
+    .hrow {
+      display: flex;
+      justify-content: space-between;
+      padding: 9px 0;
+      border-bottom: 0.5px solid var(--border);
+      font-size: .85rem
+    }
+
+    .hrow:last-child {
+      border: none
+    }
+
+    .hday {
+      color: var(--muted);
+      font-weight: 300
+    }
+
+    .htime {
+      font-weight: 500
+    }
+
+    .open-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34, 120, 57, .07);
+      border: 0.5px solid rgba(34, 120, 57, .2);
+      border-radius: 9999px;
+      padding: 4px 12px;
+      font-size: .7rem;
+      color: #226039;
+      margin-bottom: 16px
+    }
+
+    .open-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34a853;
+      animation: pulse-dot 1.6s ease-in-out infinite
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.3)
+      }
+    }
+
+    /* ===== FOOTER ===== */
+    .rk-footer {
+      border-top: 0.5px solid var(--border);
+      padding: 44px 5%;
+      background: var(--cream)
+    }
+
+    .foot-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px
+    }
+
+    .foot-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px
+    }
+
+    .foot-brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 4px
+    }
+
+    .foot-brand img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 0.5px solid var(--border);
+      object-fit: cover
+    }
+
+    .foot-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -.3px
+    }
+
+    .foot-logo em {
+      color: var(--maroon);
+      font-style: italic
+    }
+
+    .foot-tag {
+      font-size: .76rem;
+      color: var(--muted);
+      font-weight: 300
+    }
+
+    .foot-copy {
+      font-size: .7rem;
+      color: rgba(28, 28, 28, .28);
+      margin-top: 2px
+    }
+
+    /* SOCIAL BUTTONS — COLORFUL */
+    .foot-socials {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .foot-socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 9999px;
+      font-size: .78rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all .25s ease;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+      color: white
+    }
+
+    .foot-socials a svg {
+      width: 18px;
+      height: 18px;
+      fill: white
+    }
+
+    /* YouTube — Red */
+    .foot-socials a.yt {
+      background: linear-gradient(135deg, #FF0000, #CC0000);
+      border: 1px solid rgba(255, 0, 0, .2)
+    }
+
+    .foot-socials a.yt:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 0, 0, .35);
+      background: linear-gradient(135deg, #ff1a1a, #e60000)
+    }
+
+    /* Instagram — Gradient */
+    .foot-socials a.ig {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      border: 1px solid rgba(220, 39, 67, .2)
+    }
+
+    .foot-socials a.ig:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(220, 39, 67, .4);
+      filter: brightness(1.15)
+    }
+
+    /* Facebook — Blue */
+    .foot-socials a.fb {
+      background: linear-gradient(135deg, #1877F2, #0062cc);
+      border: 1px solid rgba(24, 119, 242, .2)
+    }
+
+    .foot-socials a.fb:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(24, 119, 242, .35);
+      background: linear-gradient(135deg, #1d87ff, #006be6)
+    }
+
+    .foot-socials-label {
+      font-size: .7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(28, 28, 28, .32);
+      margin-bottom: 10px;
+      display: block
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap
+    }
+
+    .foot-links a {
+      font-size: .8rem;
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .15s
+    }
+
+    .foot-links a:hover {
+      color: var(--charcoal)
+    }
+
+    /* ===== WA FLOAT ===== */
+    /* WA FLOAT */
+    .wa-float {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 200;
+      width: 54px;
+      height: 54px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, .4);
+      transition: all .25s ease;
+    }
+    .wa-float:hover {
+      transform: scale(1.1) translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, .55);
+    }
+    .wa-float svg {
+      width: 26px;
+      height: 26px;
+      fill: currentColor;
+    }
+
+    /* ===== DISH MODAL ===== */
+    .dish-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 28, 28, .72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn .2s ease
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(.96)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1)
+      }
+    }
+
+    .dish-modal {
+      background: var(--cream);
+      border-radius: 18px;
+      max-width: 520px;
+      width: 100%;
+      max-height: 92vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
+      animation: popIn .28s cubic-bezier(.2, .8, .3, 1.2)
+    }
+
+    .dish-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .92);
+      color: var(--charcoal);
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+      transition: transform .15s, background .15s
+    }
+
+    .dish-modal-close:hover {
+      transform: rotate(90deg);
+      background: #fff
+    }
+
+    .dish-modal-img {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #f5efe0, #ece3ca);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 18px 18px 0 0
+    }
+
+    .dish-modal-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .dish-modal-img .placeholder-icon {
+      font-size: 4rem;
+      opacity: .3
+    }
+
+    .dish-modal-body {
+      padding: 22px 26px 26px
+    }
+
+    .dish-modal-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 10px;
+      color: var(--charcoal)
+    }
+
+    .dish-modal-sub {
+      font-size: .9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 16px
+    }
+
+    .dish-modal-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--maroon);
+      margin-bottom: 20px
+    }
+
+    .dish-modal-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .dish-modal-actions a {
+      flex: 1;
+      min-width: 160px;
+      justify-content: center
+    }
+
+    /* ===== RESPONSIVE — TABLETS (≤1024px) ===== */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr 320px;
+        gap: 40px;
+      }
+      .logo-ring { width: 300px; height: 300px; }
+      .logo-inner { width: 260px; height: 260px; }
+      .about-grid { gap: 40px; }
+      .contact-grid { gap: 40px; }
+    }
+
+    /* ===== RESPONSIVE — PHONES (≤768px) ===== */
+    @media (max-width: 768px) {
+      /* NAV */
+      .nav-links { display: none; }
+      .nav-cta { padding: 8px 14px; font-size: .78rem; }
+      .nav-logo-text { font-size: 1rem; }
+      .nav-inner { height: 56px; }
+
+      /* HERO */
+      .hero { min-height: auto; padding: 90px 5% 50px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+      .hero-logo-wrap { display: flex; order: -1; }
+      .logo-ring { width: 180px; height: 180px; margin: 0 auto; }
+      .logo-ring::after { inset: -8px; }
+      .logo-inner { width: 160px; height: 160px; }
+      .hero h1 { font-size: 2.4rem; letter-spacing: -1.2px; }
+      .hero-sub { font-size: .92rem; margin: 14px 0 24px; max-width: 100%; }
+      .hero-btns { gap: 8px; }
+      .hero-btns .btn-dark,
+      .hero-btns .btn-ghost { padding: 10px 16px; font-size: .82rem; }
+      .hero-stats { gap: 24px; margin-top: 30px; padding-top: 22px; }
+      .stat-n { font-size: 1.5rem; }
+
+      /* ORDER STRIP */
+      .order-strip { flex-direction: column; }
+      .order-strip a { min-width: 100%; flex: none; padding: 12px 16px; font-size: .84rem; }
+
+      /* SECTIONS */
+      .rk-section { padding: 50px 5%; }
+      .sec-title { font-size: 1.8rem; }
+      .divider { margin: 10px 0 24px; }
+
+      /* ABOUT */
+      .about-grid { grid-template-columns: 1fr; gap: 24px; }
+      .about-img {
+        aspect-ratio: auto;
+        width: 320px;
+        height: 320px;
+        max-width: none;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 20px rgba(201, 152, 42, 0.1);
+      }
+      .about-img img { width: 80%; height: 80%; }
+      .about-text blockquote { font-size: 1.2rem; }
+
+      /* MENU */
+      .menu-pills { gap: 6px; margin-bottom: 24px; }
+      .pill { padding: 5px 12px; font-size: .74rem; }
+      .menu-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+      .mcard-img { height: 120px; }
+      .mcard-body { padding: 10px 12px 14px; }
+      .mcard-name { font-size: .95rem; }
+      .mcard-sub { font-size: .7rem; margin-bottom: 8px; line-height: 1.45; }
+      .mcard-price { font-size: .92rem; }
+      .mtag { font-size: .58rem; padding: 2px 7px; }
+      .menu-section-hdr h3 { font-size: 1.1rem; }
+
+      /* ADD-ONS */
+      .addon-row { font-size: .82rem; padding: 8px 0; flex-wrap: wrap; gap: 4px; }
+      .addon-name { font-size: .8rem; }
+
+      /* COMBOS */
+      .combo-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .combo-body { padding: 12px 14px 14px; }
+      .combo-name { font-size: .98rem; }
+      .combo-items { font-size: .72rem; margin-bottom: 8px; }
+      .combo-price { font-size: 1rem; }
+      .combo-savings { font-size: .62rem; }
+
+      /* SPECIAL ORDERS */
+      .special-orders { flex-direction: column; align-items: flex-start; padding: 20px; gap: 16px; }
+      .special-orders-text h4 { font-size: 1.15rem; }
+      .special-orders-text p { font-size: .82rem; }
+      .special-orders-contact { font-size: .8rem; }
+
+      /* CONTACT */
+      .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hours-box { padding: 20px; }
+
+      /* FOOTER */
+      .foot-inner { grid-template-columns: 1fr; flex-direction: column; gap: 24px; }
+      .foot-socials { gap: 8px; }
+      .foot-socials a { padding: 8px 12px; font-size: .72rem; }
+      .foot-socials a svg { width: 16px; height: 16px; }
+
+      /* WA FLOAT */
+      .wa-float { width: 48px; height: 48px; bottom: 20px; right: 16px; }
+      .wa-float svg { width: 22px; height: 22px; }
+
+      /* DISH MODAL */
+      .dish-modal { border-radius: 14px; max-width: 95vw; }
+      .dish-modal-img { aspect-ratio: 3/2; border-radius: 14px 14px 0 0; }
+      .dish-modal-body { padding: 16px 18px 20px; }
+      .dish-modal-name { font-size: 1.4rem; }
+      .dish-modal-sub { font-size: .84rem; }
+      .dish-modal-price { font-size: 1.5rem; margin-bottom: 16px; }
+      .dish-modal-actions { flex-direction: column; }
+      .dish-modal-actions a { min-width: 100%; }
+      .dish-modal-close { width: 32px; height: 32px; font-size: 1.3rem; top: 10px; right: 10px; }
+    }
+
+    /* ===== RESPONSIVE — SMALL PHONES (≤480px) ===== */
+    @media (max-width: 480px) {
+      .hero { padding: 80px 4% 40px; }
+      .hero-inner { gap: 20px; }
+      .logo-ring { width: 140px; height: 140px; }
+      .logo-ring::after { inset: -6px; }
+      .logo-inner { width: 124px; height: 124px; }
+      .hero h1 { font-size: 2rem; letter-spacing: -1px; }
+      .hero-sub { font-size: .86rem; line-height: 1.65; margin: 12px 0 20px; }
+      .hero-eyebrow span { font-size: .65rem; letter-spacing: 2px; }
+      .hero-stats { gap: 18px; flex-wrap: wrap; }
+      .stat-n { font-size: 1.3rem; }
+      .stat-l { font-size: .65rem; }
+
+      .rk-section { padding: 40px 4%; }
+      .sec-title { font-size: 1.55rem; }
+      .eyebrow { font-size: .62rem; letter-spacing: 2.5px; }
+
+      .about-img { width: 260px; height: 260px; }
+      .about-img img { width: 78%; height: 78%; }
+
+      .wa-float { bottom: 14px; right: 12px; width: 44px; height: 44px; }
+      .wa-float svg { width: 20px; height: 20px; }
+      .about-text blockquote { font-size: 1.05rem; padding-left: 14px; }
+      .about-text p { font-size: .88rem; line-height: 1.75; }
+      .chips { gap: 5px; }
+      .chip { font-size: .68rem; padding: 4px 10px; }
+
+      .menu-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .mcard-img { height: 100px; }
+      .mcard-body { padding: 8px 10px 12px; }
+      .mcard-name { font-size: .88rem; }
+      .mcard-sub { font-size: .65rem; margin-bottom: 6px; }
+      .mcard-price { font-size: .85rem; }
+      .mtag { font-size: .55rem; padding: 2px 6px; }
+
+      .combo-grid { grid-template-columns: 1fr; }
+      .combo-img { aspect-ratio: 16/9; }
+
+      .addon-wrap { padding: 2px 12px; }
+      .addon-row { font-size: .78rem; }
+      .addon-price { font-size: .85rem; }
+
+      .order-strip a { font-size: .8rem; padding: 11px 14px; }
+      .btn-dark { font-size: .8rem; padding: 10px 16px; }
+      .btn-ghost { font-size: .8rem; padding: 9px 14px; }
+
+      .irow { gap: 10px; margin-bottom: 16px; }
+      .iicon { width: 34px; height: 34px; }
+      .ival { font-size: .84rem; }
+      .ival small { font-size: .74rem; }
+      .hrow { font-size: .8rem; padding: 7px 0; }
+
+      .special-orders { padding: 16px; }
+      .special-orders-text h4 { font-size: 1.05rem; }
+      .special-orders-text p { font-size: .78rem; }
+
+      .foot-tag { font-size: .7rem; }
+      .foot-copy { font-size: .65rem; }
+      .foot-links a { font-size: .74rem; }
+
+      .dish-modal-img { aspect-ratio: 1/1; }
+      .dish-modal-name { font-size: 1.25rem; }
+      .dish-modal-price { font-size: 1.3rem; }
+      .dish-modal-body { padding: 14px 16px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="rk-nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <img class="nav-logo-img" src="logo.png" alt="The Riwayat Kitchen">
+        <div class="nav-logo-text">The <em>Riwayat</em> Kitchen</div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="https://wa.me/917903761820" target="_blank" rel="noopener">Order on WhatsApp</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">
+          <div class="hero-dot"></div>
+          <span>Muzaffarpur, Bihar &nbsp;·&nbsp; Cloud Kitchen</span>
+        </div>
+        <h1>Cooked With Love<br><em>Served With Warmth.</em></h1>
+        <p class="hero-sub">From aromatic Kolkata-style Biryanis and rich Chicken Kormas to Crispy Burgers, 
+          flavour-packed Indo-Chinese favourites and handcrafted Signature Dips ; every meal is freshly prepared using authentic ingredients, 
+          bold spices and recipes you'll keep coming back for.</p>
+        <div class="hero-btns">
+          <a class="btn-dark btn-wa" href="https://wa.me/917903761820" target="_blank" rel="noopener">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+            </svg>
+            Order on WhatsApp
+          </a>
+          <a class="btn-ghost" href="#menu">See the menu</a>
+        </div>
+        <div class="order-strip">
+          <a class="btn-dark btn-zomato"
+            href="https://www.zomato.com/muzaffarpur/the-riwayat-kitchen-muzaffarpur-locality-muzaffarpur-city/order"
+            target="_blank" rel="noopener">🍽️ Order on Zomato</a>
+          <a class="btn-dark btn-swiggy" href="https://www.swiggy.com/city/muzaffarpur/the-riwayat-kitchen-muz-muzaffarpur-city-rest1406656?source=sharing" 
+          target="_blank" rel="noopener">🛵 Order on Swiggy</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-n">30+</div>
+            <div class="stat-l">Dishes</div>
+          </div>
+          <div>
+            <div class="stat-n">Loved</div>
+            <div class="stat-l">by family</div>
+          </div>
+          <div>
+            <div class="stat-n">100%</div>
+            <div class="stat-l">Home-cooked</div>
+          </div>
+          <div>
+            <div class="stat-n">Fresh</div>
+            <div class="stat-l">Every order</div>
+          </div>
+          <div>
+            <div class="stat-n">Zero</div>
+            <div class="stat-l">preservatives</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-logo-wrap">
+        <div class="logo-ring">
+          <div class="logo-inner">
+            <img src="logo.png" alt="The Riwayat Kitchen">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="rk-section">
+    <div class="sec-inner">
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="pics/about.jpg" alt="The Riwayat Kitchen crest">
+        </div>
+        <div class="about-text">
+          <span class="eyebrow">The story</span>
+          <div class="sec-title">Made with a mother's love</div>
+          <div class="divider"></div>
+          <blockquote>"Riwayat" — the stories, traditions and flavours that live on through generations.</blockquote>
+          <p>Every great meal has a beginning, and ours began in a home where food was the language of love. 
+            Our mother has always believed that the best recipes aren't rushed ; they're nurtured with patience, tradition and care.
+          Friends would ask for her recipes. Relatives would request her biryani. Neighbours would wait for special occasions just to enjoy her cooking.</p>
+          <p>She never imagined those recipes would one day reach thousands through social media or become the foundation of her own kitchen.</p>
+          <p>Riwayat Kitchen was born from that dream — a cloud kitchen dedicated to serving authentic, comforting food that feels just like home. 
+            It carries those same recipes, the same care, and the same promise: food that comforts, connects, and creates memories around every table.</p>
+          <p>Every order is freshly prepared, carefully packed and sent with the warmth we'd serve our own family.</p>
+          <div class="chips">
+            <span class="chip">🍃 No preservatives</span>
+            <span class="chip">✨ Freshly Cooked Daily</span>
+            <span class="chip">🥘 Authentic Recipes</span>
+            <span class="chip">🌿 Premium Whole Spices</span>
+            <span class="chip">📦 Hygienically Packed</span>
+            <span class="chip">🍛 Bulk, Daily tiffins & Party Orders</span>
+            <span class="chip">📲 WhatsApp Orders</span>
+            <span class="chip">🍁 Swiggy &amp; Zomato</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section id="menu" class="rk-section">
+    <div class="sec-inner">
+      <span class="eyebrow">Welcome to our kitchen</span>
+      <div class="sec-title">Our Menu - Made Fresh, Served with Love</div> 
+      <div class="sec-sub">From aromatic Biryanis to crispy burgers, our menu is a celebration of home-style cooking. Each dish is crafted with care, using authentic spices and fresh quality ingredients and the same care we'd cook for our own family</div>
+      <div class="divider"></div>
+
+      <div class="menu-pills">
+        <button class="pill on" onclick="showCat('all',this)">All</button>
+        <button class="pill" onclick="showCat('chicken',this)">Signature Chicken Specials</button>
+        <button class="pill" onclick="showCat('burger',this)">Riwayat Burgers</button>
+        <button class="pill" onclick="showCat('addons',this)">Add-ons</button>
+        <button class="pill" onclick="showCat('veg',this)">Vegetarian Delight</button>
+        <button class="pill" onclick="showCat('bread',this)">Fresh Indian Parathas</button>
+        <button class="pill" onclick="showCat('dips',this)">Signature Dips &amp; sides</button>
+        <button class="pill" onclick="showCat('bevsides',this)">Beverages &amp; Sides</button>
+        <button class="pill" onclick="showCat('combo',this)">Riwayat Combos</button>
+      </div>
+
+      <!-- ===== CHICKEN SPECIALS ===== -->
+      <div class="menu-section" data-cat="chicken">
+        <div class="menu-section-hdr">
+          <h3>🍗 Signature Chicken Specials <span style="font-size:.7rem;color:var(--muted);font-weight:300">(Non-Veg)</span></h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="mcard" role="button" tabindex="0" data-name="Kolkata Chicken Dum Biryani"
+            data-desc="Full plate · Authentic Kolkata-style Dum Biryani layered with fragrant long-grain rice, tender chicken, and aromatic whole spices. Slow-cooked on dum for rich flavors in every spoonful."
+            data-price="₹220" data-img="pics/biryani.jpg">
+            <div class="mcard-img"><img src="pics/biryani.jpg" alt="Kolkata Chicken Dum Biryani" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Kolkata Chicken Dum Biryani</div>
+              <div class="mcard-sub">Full plate · Authentic Kolkata-style Dum Biryani layered with fragrant long-grain rice, tender chicken, and aromatic whole spices. Slow-cooked on dum for rich flavors in every spoonful.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹220</span><span class="mtag hot">Signature</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Chicken Chilli Dry"
+            data-desc="8 pieces · Crispy boneless chicken tossed in our signature Indo-Chinese sauce with fresh garlic and crunchy capsicum. Wok-fried to perfection for that irresistible smoky, spicy flavor you'll crave till the last bite."
+            data-price="₹299" data-img="pics/chilli_dry.jpg">
+            <div class="mcard-img"><img src="pics/chilli_dry.jpg" alt="Chicken Chilli Dry" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Chicken Chilli Dry</div>
+              <div class="mcard-sub">8 pc · Crispy boneless chicken tossed in our signature Indo-Chinese sauce with fresh garlic and crunchy capsicum. Wok-fried to perfection for that irresistible smoky, spicy flavor you'll crave till the last bite.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹299</span><span class="mtag hot">Bestseller</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Chicken Chilli Gravy"
+            data-desc="8 pieces · Juicy chicken cooked in a rich, flavorful chilli gravy with garlic, onions, and fresh capsicum. A perfect combination of bold flavors and silky gravy that pairs beautifully with parathas or rice."
+            data-price="₹320" data-img="pics/chilli_gravy.jpg">
+            <div class="mcard-img"><img src="pics/chilli_gravy.jpg" alt="Chicken Chilli Gravy" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Chicken Chilli Gravy</div>
+              <div class="mcard-sub">8 pc · Juicy chicken cooked in a rich, flavorful chilli gravy with garlic, onions, and fresh capsicum. A perfect combination of bold flavors and silky gravy that pairs beautifully with parathas or rice.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹320</span><span class="mtag">Popular</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Chicken Popcorn"
+            data-desc="Golden, crispy chicken bites seasoned with aromatic herbs and spices. Crunchy outside, juicy inside—the perfect anytime snack for every chicken lover. Available in Regular (250g) and Medium (500g)."
+            data-price="Reg (250g) ₹199 · Med (500g) ₹350" data-img="pics/chicken_popcorn.jpg">
+            <div class="mcard-img"><img src="pics/chicken_popcorn.jpg" alt="Chicken Popcorn" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Chicken Popcorn</div>
+              <div class="mcard-sub">Golden, crispy chicken bites seasoned with aromatic herbs and spices. Crunchy outside, juicy inside—the perfect anytime snack for every chicken lover.</div>
+              <div class="mcard-foot"><span class="mcard-price">Regular ₹199 · Medium ₹350</span><span
+                  class="mtag">Must-Try</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Chicken Qorma"
+            data-desc="Tender chicken slow-cooked in a rich Mughlai-style gravy with fried onions and creamy cashew goodness. Mildly spiced, comforting, and full of authentic homemade flavor. Available in Half (4 pieces) and Full (8 pieces)."
+            data-price="Half (4pc) ₹199 · Full (8pc) ₹250" data-img="pics/chicken_korma.jpg">
+            <div class="mcard-img"><img src="pics/chicken_korma.jpg" alt="Chicken Qorma" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Chicken Korma</div>
+              <div class="mcard-sub">Tender chicken slow-cooked in a rich Mughlai-style gravy with fried onions and creamy cashew goodness. Mildly spiced, comforting, and full of authentic homemade flavor.</div>
+              <div class="mcard-foot"><span class="mcard-price">Half ₹199 · Full ₹250</span><span
+                  class="mtag hot">Special</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Jama Masjid Style Chicken Fry"
+            data-desc="6 pieces · Inspired by the famous streets of Old Delhi, this spicy chicken fry is marinated with bold Indian spices and fried until beautifully crisp. Packed with smoky flavors that keep you coming back for more."
+            data-price="₹250" data-img="pics/chicken_fry.jpg">
+            <div class="mcard-img"><img src="pics/chicken_fry.jpg" alt="Jama Masjid Style Chicken Fry" loading="lazy">
+            </div>
+            <div class="mcard-body">
+              <div class="mcard-name">Jama Masjid Style Chicken Fry</div>
+              <div class="mcard-sub">6 pc · Inspired by the famous streets of Old Delhi, this spicy chicken fry is marinated with bold Indian spices and fried until beautifully crisp. Packed with smoky flavors that keep you coming back for more.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹250</span><span class="mtag star">Signature</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Chicken Lollipop"
+            data-desc="4 pieces · Juicy chicken lollipops coated in our signature seasoning and fried to crispy perfection. Served hot with a burst of bold flavors in every bite."
+            data-price="₹289" data-img="pics/chicken_lollipop.jpg">
+            <div class="mcard-img"><img src="pics/chicken_lollipop.jpg" alt="Chicken Lollipop" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Chicken Lollipop</div>
+              <div class="mcard-sub">4 pc · Juicy chicken lollipops coated in our signature seasoning and fried to crispy perfection. Served hot with a burst of bold flavors in every bite.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹289</span><span class="mtag">Popular</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== BURGERS — NON VEG ===== -->
+      <div class="menu-section" data-cat="burger">
+        <div class="menu-section-hdr">
+          <h3>🍔 Riwayat Burgers — Non Veg</h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="mcard" role="button" tabindex="0" data-name="Classic Chicken Burger"
+            data-desc="1 burger · A juicy homemade chicken patty layered with fresh vegetables and creamy house sauce inside a soft toasted bun. Simple, satisfying, and packed with flavor."
+            data-price="₹99" data-img="pics/chicken_burger.jpg">
+            <div class="mcard-img"><img src="pics/chicken_burger.jpg" alt="Classic Chicken Burger" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Classic Chicken Burger</div>
+              <div class="mcard-sub">1 burger · A juicy homemade chicken patty layered with fresh vegetables and creamy house sauce inside a soft toasted bun. Simple, satisfying, and packed with flavor.
+              </div>
+              <div class="mcard-foot"><span class="mcard-price">₹99</span><span class="mtag">Classic</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Chicken Cheese Burger"
+            data-desc="1 burger · Our classic chicken burger topped with rich melted cheese and fresh vegetables for the perfect combination of creamy, juicy, and delicious."
+            data-price="₹129" data-img="pics/chicken_cheese.jpg">
+            <div class="mcard-img"><img src="pics/chicken_cheese.jpg" alt="Chicken Cheese Burger" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Chicken Cheese Burger</div>
+              <div class="mcard-sub">1 burger · Our classic chicken burger topped with rich melted cheese and fresh vegetables for the perfect combination of creamy, juicy, and delicious.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹129</span><span class="mtag">Popular</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Chicken Double Patty Burger"
+            data-desc="2 chicken patties · Two juicy chicken patties stacked inside a toasted bun with fresh vegetables and signature sauce. Bigger, bolder, and made for serious burger lovers."
+            data-price="₹179" data-img="pics/chicken_double.jpg">
+            <div class="mcard-img"><img src="pics/chicken_double.jpg" alt="Chicken Double Patty Burger" loading="lazy">
+            </div>
+            <div class="mcard-body">
+              <div class="mcard-name">Chicken Double Patty Burger</div>
+              <div class="mcard-sub">2 patties · Two juicy chicken patties stacked inside a toasted bun with fresh vegetables and signature sauce. Bigger, bolder, and made for serious burger lovers.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹179</span><span class="mtag hot">Premium</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="⭐ Riwayat Special Chicken Cheese Burger"
+            data-desc="The signature burger of The Riwayat Kitchen! Loaded with juicy chicken, rich cheese, and our exclusive house flavors for an unforgettable burger experience."
+            data-price="₹199" data-img="pics/riwayat_special.jpg" style="border-color:rgba(201,152,42,.35)">
+            <div class="mcard-img"><img src="pics/riwayat_special.jpg" alt="Riwayat Special Chicken Cheese Burger"
+                loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">⭐ Riwayat Special Chicken Cheese Burger</div>
+              <div class="mcard-sub">The signature burger of The Riwayat Kitchen! Loaded with juicy chicken, rich cheese, and our exclusive house flavors for an unforgettable burger experience.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹199</span><span class="mtag star">Signature</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VEG BURGERS -->
+        <div class="menu-section-hdr" style="margin-top:32px">
+          <h3>🥬 Riwayat Burgers — Veg</h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="mcard" role="button" tabindex="0" data-name="Veg Aloo Tikki Burger"
+            data-desc="1 burger · A crispy golden aloo tikki with fresh vegetables and creamy sauce inside a soft toasted bun. A comforting classic loved by everyone."
+            data-price="₹79" data-img="pics/chicken_burger.jpg">
+            <div class="mcard-img"><img src="pics/chicken_burger.jpg" alt="Veg Aloo Tikki Burger" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Veg Aloo Tikki Burger</div>
+              <div class="mcard-sub">1 burger · A crispy golden aloo tikki with fresh vegetables and creamy sauce inside a soft toasted bun. A comforting classic loved by everyone.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹79</span><span class="mtag veg">Classic</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Veg Aloo Tikki Cheese Burger"
+            data-desc="1 burger · Our crispy aloo tikki burger made even better with delicious melted cheese. Crispy, cheesy, and incredibly satisfying."
+            data-price="₹99" data-img="pics/veg_cheese2.jpg">
+            <div class="mcard-img"><img src="pics/veg_cheese2.jpg" alt="Veg Aloo Tikki Cheese Burger" loading="lazy">
+            </div>
+            <div class="mcard-body">
+              <div class="mcard-name">Veg Aloo Tikki Cheese Burger</div>
+              <div class="mcard-sub">1 burger · Our crispy aloo tikki burger made even better with delicious melted cheese. Crispy, cheesy, and incredibly satisfying.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹99</span><span class="mtag veg">Popular</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="Veg Double Patty Burger"
+            data-desc="2 veg patties · Two crispy vegetable patties layered with fresh vegetables and signature sauce for a hearty vegetarian burger packed with flavor."
+            data-price="₹119" data-img="pics/veg_double.jpg">
+            <div class="mcard-img"><img src="pics/veg_double.jpg" alt="Veg Double Patty Burger" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Veg Double Patty Burger</div>
+              <div class="mcard-sub">2 patties · Two crispy vegetable patties layered with fresh vegetables and signature sauce for a hearty vegetarian burger packed with flavor.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹119</span><span class="mtag veg">Premium</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== BURGER ADD-ONS ===== -->
+      <div class="menu-section" data-cat="addons">
+        <div class="menu-section-hdr">
+          <h3>➕ Burger Add-ons</h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="addon-wrap">
+          <div class="addon-row"><span class="addon-name">Customize Veggies [ Caramelised Onion, Tomato &amp;
+              Cucumber ] </span><span class="addon-price">+₹12</span></div>
+          <div class="addon-row"><span class="addon-name">Extra Cheese Slice</span><span class="addon-price">+₹35</span>
+          </div>
+          <div class="addon-row"><span class="addon-name">Extra Sauce (30 g)</span><span class="addon-price">+₹10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== VEGETARIAN DELIGHT ===== -->
+      <div class="menu-section" data-cat="veg">
+        <div class="menu-section-hdr">
+          <h3>🥘 Vegetarian Delight</h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="mcard" role="button" tabindex="0" data-name="Cashew Paneer Riwayati"
+            data-desc="500g · Soft paneer cubes cooked in our rich signature gravy with buttery cashews and aromatic Indian spices. Creamy, comforting, and perfect with parathas."
+            data-price="₹289" data-img="pics/cashew_paneer.jpg">
+            <div class="mcard-img"><img src="pics/cashew_paneer.jpg" alt="Cashew Paneer Riwayati" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Cashew Paneer Riwayati</div>
+              <div class="mcard-sub">500 g · Soft paneer cubes cooked in our rich signature gravy with buttery cashews and aromatic Indian spices. Creamy, comforting, and perfect with parathas.
+              </div>
+              <div class="mcard-foot"><span class="mcard-price">₹289</span><span class="mtag star">Riwayat Special</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== FRESH INDIAN PARATHAS ===== -->
+      <div class="menu-section" data-cat="bread">
+        <div class="menu-section-hdr">
+          <h3>🫓 Fresh Indian Parathas</h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="mcard" role="button" tabindex="0" data-name="Laccha Paratha"
+            data-desc="1 piece · Freshly prepared multi-layered paratha that's crispy on the outside and soft inside. The perfect companion to every curry." data-price="₹45"
+            data-img="pics/lacha_paratha.jpg">
+            <div class="mcard-img"><img src="pics/lacha_paratha.jpg" alt="Laccha Paratha" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Laccha Paratha</div>
+              <div class="mcard-sub">1 pc · Freshly prepared multi-layered paratha that's crispy on the outside and soft inside. The perfect companion to every curry.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹45</span><span class="mtag veg">Premium</span></div>
+            </div>
+          </div>
+          <div class="mcard" role="button" tabindex="0" data-name="Aloo Paratha"
+            data-desc="1 piece · Soft whole-wheat paratha generously stuffed with flavorful spiced potatoes and cooked until beautifully golden."
+            data-price="₹50" data-img="pics/aloo_paratha.jpg">
+            <div class="mcard-img"><img src="pics/aloo_paratha.jpg" alt="Aloo Paratha" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">Aloo Paratha</div>
+              <div class="mcard-sub">1 pc · Soft whole-wheat paratha generously stuffed with flavorful spiced potatoes and cooked until beautifully golden.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹50</span><span class="mtag veg">Best</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== DIPS ===== -->
+      <div class="menu-section" data-cat="dips">
+        <div class="menu-section-hdr">
+          <h3>🧄 Riwayat Signature Dips <span style="font-size:.7rem;color:var(--muted);font-weight:300">(50 g
+              each)</span></h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="mcard" role="button" tabindex="0" data-name="🌿 Mint Coriander Chutney"
+            data-desc="50g · A refreshing blend of fresh coriander and mint with a tangy kick that perfectly complements every snack."
+            data-price="₹39" data-img="pics/mint_chutney.jpg">
+            <div class="mcard-img"><img src="pics/mint_chutney.jpg" alt="Mint Coriander Chutney" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🌿 Mint Coriander Chutney</div>
+              <div class="mcard-sub">50 g · A refreshing blend of fresh coriander and mint with a tangy kick that perfectly complements every snack.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹39</span><span class="mtag veg">Veg</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🧄 Creamy Garlic Mayo"
+            data-desc="50g · Rich, creamy garlic mayo with a smooth texture and delicious garlic flavor. The perfect partner for fries, burgers, and popcorn."
+            data-price="₹39" data-img="pics/creamy_garlic.jpg">
+            <div class="mcard-img"><img src="pics/creamy_garlic.jpg" alt="Creamy Garlic Mayo" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🧄 Creamy Garlic Mayo</div>
+              <div class="mcard-sub">50 g · Rich, creamy garlic mayo with a smooth texture and delicious garlic flavor. The perfect partner for fries, burgers, and popcorn.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹39</span><span class="mtag">Fan favourite</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🌶️ Sweet Thai Chilli Dip"
+            data-desc="50g · A delicious blend of sweet and spicy flavors that adds the perfect zing to burgers, fries, and crispy snacks."
+            data-price="₹39" data-img="pics/sweet_thai.jpg">
+            <div class="mcard-img"><img src="pics/sweet_thai.jpg" alt="Sweet Thai Chilli Dip" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🌶️ Sweet Thai Chilli Dip</div>
+              <div class="mcard-sub">50 g · A delicious blend of sweet and spicy flavors that adds the perfect zing to burgers, fries, and crispy snacks.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹39</span><span class="mtag">Premium</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🧀 American Cheese Sauce"
+            data-desc="50g · Smooth, creamy cheese sauce made with real cheese and butter. Rich, cheesy, and completely irresistible."
+            data-price="₹49" data-img="pics/american_cheese.jpg">
+            <div class="mcard-img"><img src="pics/american_cheese.jpg" alt="American Cheese Sauce" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🧀 American Cheese Sauce</div>
+              <div class="mcard-sub">50 g · Smooth, creamy cheese sauce made with real cheese and butter. Rich, cheesy, and completely irresistible.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹49</span><span class="mtag star">Fan favourite</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🐉 Hot Dragon Chilli Sauce"
+            data-desc="50g · A fiery garlic-chilli dip with bold flavors and just the right amount of heat for spice lovers."
+            data-price="₹39" data-img="pics/hot_dragon.jpg">
+            <div class="mcard-img"><img src="pics/hot_dragon.jpg" alt="Hot Dragon Chilli Sauce" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🐉 Hot Dragon Chilli Sauce</div>
+              <div class="mcard-sub">50 g · A fiery garlic-chilli dip with bold flavors and just the right amount of heat for spice lovers.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹39</span><span class="mtag hot">Popular</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🥬 Smoked Green Dip"
+            data-desc="50g · A unique creamy dip with smoky roasted capsicum and fresh paneer, offering a rich and flavorful twist."
+            data-price="₹49" data-img="pics/smoked_green.jpg">
+            <div class="mcard-img"><img src="pics/smoked_green.jpg" alt="Smoked Green Dip" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🥬 Smoked Green Dip</div>
+              <div class="mcard-sub">50 g · A unique creamy dip with smoky roasted capsicum and fresh paneer, offering a rich and flavorful twist.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹49</span><span class="mtag veg">Must-Try</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🌶️ Spicy Green Mayo"
+            data-desc="50g · Fresh green chillies blended into creamy mayo for a refreshing dip with the perfect spicy kick."
+            data-price="₹39" data-img="pics/spicy_green.jpg">
+            <div class="mcard-img"><img src="pics/spicy_green.jpg" alt="Spicy Green Mayo" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🌶️ Spicy Green Mayo</div>
+              <div class="mcard-sub">50 g · Fresh green chillies blended into creamy mayo for a refreshing dip with the perfect spicy kick.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹39</span><span class="mtag hot">Best</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== BEVERAGES & SIDES ===== -->
+      <div class="menu-section" data-cat="bevsides">
+        <div class="menu-section-hdr">
+          <h3>🥤 Beverages &amp; Sides</h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="mcard" role="button" tabindex="0" data-name="🥤 Cold Drink"
+            data-desc="250 ml · Thums Up — chilled to perfection. The perfect companion to any meal."
+            data-price="₹20" data-img="pics/thumbs_up.jpg">
+            <div class="mcard-img"><img src="pics/thumbs_up.jpg" alt="Cold Drink" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🥤 Cold Drink</div>
+              <div class="mcard-sub">250 ml · A perfectly chilled Thums Up to refresh your meal and complete your dining experience.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹20</span><span class="mtag veg">Cold Drink</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🍟 French Fries"
+            data-desc="100g · Crispy golden fries, lightly salted. A classic snack everyone loves." data-price="₹99"
+            data-img="pics/french_fries.jpg">
+            <div class="mcard-img"><img src="pics/french_fries.jpg" alt="French Fries" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🍟 French Fries</div>
+              <div class="mcard-sub">100 g · Golden, crispy potato fries fried until perfectly crunchy and lightly seasoned. Best enjoyed with our signature dips.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹99</span><span class="mtag veg">Popular</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🥗 Fresh Salad"
+            data-desc="100g · Tomato + cucumber + onion + lemon + green chilli. Fresh, crunchy, and healthy." data-price="₹39" 
+            data-img="pics/salad.jpg">
+            <div class="mcard-img"><img src="pics/salad.jpg" alt="Fresh Salad" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🥗 Fresh Salad</div>
+              <div class="mcard-sub">100 g · A refreshing mix of fresh cucumber, tomatoes, onions, and lemon. The perfect side to complete any meal.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹39</span><span class="mtag veg">Veg</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🥛 Boondi Raita"
+            data-desc="100g · Chilled yoghurt with boondi and light spicing. The classic cooling companion to any biryani."
+            data-price="₹45" data-img="pics/raita.jpg">
+            <div class="mcard-img"><img src="pics/raita.jpg" alt="Boondi Raita" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🥛 Boondi Raita</div>
+              <div class="mcard-sub">100 g · Cool, creamy yogurt blended with crispy boondi for the perfect refreshing accompaniment to spicy dishes.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹45</span><span class="mtag veg">Veg</span></div>
+            </div>
+          </div>
+
+          <div class="mcard" role="button" tabindex="0" data-name="🥒 Cucumber Raita"
+            data-desc="100g · Cool cucumber in spiced yoghurt. Refreshing and light — perfect with any curry."
+            data-price="₹45" data-img="pics/raita.jpg">
+            <div class="mcard-img"><img src="pics/raita.jpg" alt="Cucumber Raita" loading="lazy"></div>
+            <div class="mcard-body">
+              <div class="mcard-name">🥒 Cucumber Raita</div>
+              <div class="mcard-sub">100 g · Fresh cucumber folded into chilled yogurt for a light, refreshing side that balances every meal.</div>
+              <div class="mcard-foot"><span class="mcard-price">₹45</span><span class="mtag veg">Veg</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== COMBOS ===== -->
+      <div class="menu-section" data-cat="combo">
+        <div class="menu-section-hdr">
+          <h3>👑 Riwayat Combos</h3>
+          <div class="menu-section-line"></div>
+        </div>
+        <div class="combo-grid">
+
+          <div class="combo-card" role="button" tabindex="0" data-name="⭐ Riwayat Special Meal"
+            data-desc="Chicken Chilli Dry (8pc) + 2 Laccha Paratha. The most popular choice for a complete meal."
+            data-price="₹380" data-img="pics/riwayat_meal.jpg">
+            <div class="combo-img"><img src="pics/riwayat_meal.jpg" alt="Riwayat Special Meal" loading="lazy"></div>
+            <div class="combo-body">
+              <div class="combo-name">⭐ Riwayat Special Meal</div>
+              <div class="combo-items">Our best-selling combo featuring Chicken Chilli Dry served with two flaky Laccha Parathas. A complete meal that's spicy, satisfying, and full of flavor.</div>
+              <div class="combo-foot"><span class="combo-price">₹380</span><span class="combo-savings">Best value</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="combo-card" role="button" tabindex="0" data-name="🥘 Paneer Paradise"
+            data-desc="Cashew Paneer Riwayati + 2 Laccha Paratha + Mint Chutney. The perfect vegetarian feast."
+            data-price="₹360" data-img="pics/paneer_paradise.jpg">
+            <div class="combo-img"><img src="pics/paneer_paradise.jpg" alt="Paneer Paradise" loading="lazy"></div>
+            <div class="combo-body">
+              <div class="combo-name">🥘 Paneer Paradise</div>
+              <div class="combo-items">Creamy Cashew Paneer Riwayati paired with two Laccha Parathas and refreshing Mint Coriander Chutney. A wholesome vegetarian feast.</div>
+              <div class="combo-foot"><span class="combo-price">₹360</span><span class="combo-savings">Veg combo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="combo-card" role="button" tabindex="0" data-name="👑 Royal Dawat"
+            data-desc="Chilli Dry + Popcorn (Reg) + 2 Laccha Paratha + 2 Dips. A royal feast for two." data-price="₹569"
+            data-img="pics/royal_dawat.jpg">
+            <div class="combo-img"><img src="pics/royal_dawat.jpg" alt="Royal Dawat" loading="lazy"></div>
+            <div class="combo-body">
+              <div class="combo-name">👑 Royal Dawat</div>
+              <div class="combo-items">A grand combination of Chicken Chilli Dry, Chicken Popcorn, two Laccha Parathas, and any two signature dips. Perfect for sharing with family and friends.</div>
+              <div class="combo-foot"><span class="combo-price">₹569</span><span class="combo-savings">Feast for
+                  2</span></div>
+            </div>
+          </div>
+
+          <div class="combo-card" role="button" tabindex="0" data-name="🍛 Qorma Feast"
+            data-desc="Chicken Qorma (Half) + 2 Laccha Paratha + Mint Chutney. Desi comfort at its finest."
+            data-price="₹259" data-img="pics/korma_feast.jpg">
+            <div class="combo-img"><img src="pics/korma_feast.jpg" alt="Qorma Feast" loading="lazy"></div>
+            <div class="combo-body">
+              <div class="combo-name">🍛 Qorma Feast</div>
+              <div class="combo-items">Rich Chicken Qorma served with two flaky Laccha Parathas and refreshing Mint Coriander Chutney. A comforting North Indian meal.</div>
+              <div class="combo-foot"><span class="combo-price">₹259</span><span class="combo-savings">Desi
+                  comfort</span></div>
+            </div>
+          </div>
+
+          <div class="combo-card" role="button" tabindex="0" data-name="🍿 Popcorn Party"
+            data-desc="Chicken Popcorn (Reg) + Any 2 Dips + 1 Cold Drink. Perfect snack-time combo." data-price="₹299"
+            data-img="pics/popcorn_party.jpg">
+            <div class="combo-img"><img src="pics/popcorn_party.jpg" alt="Popcorn Party" loading="lazy"></div>
+            <div class="combo-body">
+              <div class="combo-name">🍿 Popcorn Party</div>
+              <div class="combo-items">Our crispy Chicken Popcorn served with any two signature dips and a chilled cold drink. The ultimate snack combo for every chicken lover.</div>
+              <div class="combo-foot"><span class="combo-price">₹299</span><span class="combo-savings">Snack time</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="combo-card" role="button" tabindex="0" data-name="🍔 Burger Bliss (Non-Veg)"
+            data-desc="Chicken Cheese Burger + Popcorn (Reg) + 1 Cold Drink. The ultimate non-veg burger combo."
+            data-price="₹369" data-img="pics/burger_bliss(non-veg).jpg">
+            <div class="combo-img"><img src="pics/burger_bliss(non-veg).jpg" alt="Burger Bliss Non-Veg" loading="lazy">
+            </div>
+            <div class="combo-body">
+              <div class="combo-name">🍔 Burger Bliss (Non-Veg)</div>
+              <div class="combo-items">A juicy Chicken Cheese Burger served with crispy Chicken Popcorn and a refreshing cold drink. A satisfying combo for burger lovers.</div>
+              <div class="combo-foot"><span class="combo-price">₹369</span><span class="combo-savings">Non-veg
+                  pick</span></div>
+            </div>
+          </div>
+
+          <div class="combo-card" role="button" tabindex="0" data-name="🍔 Burger Bliss (Veg)"
+            data-desc="Veg Cheese Burger + Cold Drink. A satisfying veg combo at a great price." data-price="₹115"
+            data-img="pics/burger_bliss(veg).jpg">
+            <div class="combo-img"><img src="pics/burger_bliss(veg).jpg" alt="Burger Bliss Veg" loading="lazy"></div>
+            <div class="combo-body">
+              <div class="combo-name">🍔 Burger Bliss (Veg)</div>
+              <div class="combo-items">A delicious Veg Cheese Burger paired with a chilled cold drink. A simple, filling, and flavorful vegetarian combo.</div>
+              <div class="combo-foot"><span class="combo-price">₹115</span><span class="combo-savings">Veg pick</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== SPECIAL ORDERS ===== -->
+      <div class="special-orders">
+        <div class="special-orders-text">
+          <h4>✨ Special Orders ✨</h4>
+          <p>Looking for <strong>Mutton Biryani</strong> or <strong>planning a party</strong> or <strong>Daily
+              Tiffins/Thalis</strong>?<br>
+            We prepare <strong>customized bulk orders, daily tiffins, party platters and special meals</strong> ; all freshly cooked with the same love and care that defines Riwayat Kitchen.</p>
+          <div class="special-orders-contact">
+            For customized orders &amp; Bulk pricing and availability :<br>
+            💬 WhatsApp: <strong>+91 7903761820</strong><br>
+            📧 Email: <strong>theriwayatkitchen@gmail.com</strong>
+          </div>
+        </div>
+        <a class="btn-dark btn-wa" href="https://wa.me/917903761820" target="_blank" rel="noopener">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+          </svg>
+          WhatsApp to order
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="rk-section">
+    <div class="sec-inner">
+      <span class="eyebrow">Reach us</span>
+      <div class="sec-title">Get in touch</div>
+      <div class="sec-sub">Order your favourites or let us help you plan your next family gathering.!</div>
+      <div class="divider"></div>
+      <div class="contact-grid">
+        <div>
+          <div class="irow">
+            <div class="iicon"><svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div>
+              <div class="ilbl">Location</div>
+              <div class="ival">Based in Muzaffarpur, Bihar<br><small>Home-based cloud kitchen</small></div>
+            </div>
+          </div>
+          <div class="irow">
+            <div class="iicon"><svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg></div>
+            <div>
+              <div class="ilbl">WhatsApp</div>
+              <div class="ival">+91 79037 61820<br><small>Orders · Bulk · Tiffin · Biryani</small></div>
+            </div>
+          </div>
+          <div class="irow">
+            <div class="iicon"><svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg></div>
+            <div>
+              <div class="ilbl">Email</div>
+              <div class="ival">theriwayatkitchen@gmail.com</div>
+            </div>
+          </div>
+          <div class="order-strip" style="margin-top:24px">
+            <a class="btn-dark btn-wa" href="https://wa.me/917903761820" target="_blank" rel="noopener">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+              </svg>
+              WhatsApp
+            </a>
+            <a class="btn-dark btn-zomato"
+              href="https://www.zomato.com/muzaffarpur/the-riwayat-kitchen-muzaffarpur-locality-muzaffarpur-city/order"
+              target="_blank" rel="noopener">🍽️ Zomato</a>
+            <a class="btn-dark btn-swiggy" href="https://www.swiggy.com/city/muzaffarpur/the-riwayat-kitchen-muz-muzaffarpur-city-rest1406656?source=sharing" 
+            target="_blank" rel="noopener">🛵 Swiggy</a>
+          </div>
+        </div>
+        <div>
+          <div class="hours-box">
+            <div class="open-pill">
+              <div class="open-dot"></div>Open today
+            </div>
+            <div class="hours-title">Kitchen hours</div>
+            <div class="sec-sub"></div>Fresh meals are prepared throughout the day.</div>
+            <div class="hrow"><span class="hday">Monday – Friday</span><span class="htime">11 AM – 9 PM</span></div>
+            <div class="hrow"><span class="hday">Saturday - Sunday</span><span class="htime">10 AM – 10 PM</span></div>
+            <div class="hrow"><span class="hday">Mutton Biryani, Bulk Orders, Daily Tiffins &amp; Thali</span><span class="htime">Pre-order required via WhatsApp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="rk-footer">
+    <div class="foot-inner">
+      <div class="foot-left">
+        <div class="foot-brand">
+          <img src="logo.png" alt="The Riwayat Kitchen">
+          <div class="foot-logo">The <em>Riwayat</em> Kitchen</div>
+        </div>
+        <div class="foot-tag">Cooked with Love, Served with Warmth</div>
+        <div class="foot-tag">Muzaffarpur, Bihar</div>
+        <div class="foot-copy">© 2026 The Riwayat Kitchen. All rights reserved.</div>
+        <div style="margin-top:18px">
+          <span class="foot-socials-label">Follow our journey, discover new recipes, behind-the-scenes moments and fresh menu updates.</span>
+          <div class="foot-socials">
+            <a class="yt" href="https://www.youtube.com/results?search_query=roast+and+toast+kitchen" target="_blank"
+              rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              YouTube
+            </a>
+            <a class="ig" href="https://www.instagram.com/soni_kitchen786/" target="_blank" rel="noopener"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
+              Instagram
+            </a>
+            <a class="fb" href="https://www.facebook.com/Roksana%20Parweeen" target="_blank" rel="noopener"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="foot-links">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WA FLOAT BUTTON ===== -->
+  <a class="wa-float" href="https://wa.me/917903761820" target="_blank" rel="noopener" title="Order on WhatsApp" aria-label="Order on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // === MENU CATEGORY FILTER ===
+    function showCat(cat, el) {
+      document.querySelectorAll('.menu-pills .pill').forEach(p => p.classList.remove('on'));
+      el.classList.add('on');
+      document.querySelectorAll('.menu-section').forEach(s => {
+        s.style.display = (cat === 'all' || s.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+
+    // === SMOOTH SCROLL ===
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // === DISH MODAL POPUP ===
+    function openDishModal(name, desc, price, imgSrc) {
+      // Remove any existing modal
+      const existing = document.querySelector('.dish-modal-backdrop');
+      if (existing) existing.remove();
+
+      const backdrop = document.createElement('div');
+      backdrop.className = 'dish-modal-backdrop';
+
+      const imgHtml = imgSrc
+        ? `<img src="${imgSrc}" alt="${name}">`
+        : `<span class="placeholder-icon">🍽️</span>`;
+
+      backdrop.innerHTML = `
+    <div class="dish-modal">
+      <button class="dish-modal-close" aria-label="Close">&times;</button>
+      <div class="dish-modal-img">${imgHtml}</div>
+      <div class="dish-modal-body">
+        <div class="dish-modal-name">${name}</div>
+        <div class="dish-modal-sub">${desc}</div>
+        <div class="dish-modal-price">${price}</div>
+        <div class="dish-modal-actions">
+          <a class="btn-dark btn-wa" href="https://wa.me/917903761820?text=${encodeURIComponent('Hi! I would like to order: ' + name)}" target="_blank" rel="noopener">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+            Order on WhatsApp
+          </a>
+          <a class="btn-dark btn-zomato" href="https://www.zomato.com/muzaffarpur/the-riwayat-kitchen-muzaffarpur-locality-muzaffarpur-city/order" target="_blank" rel="noopener">🍽️ Zomato</a>
+          <a class="btn-dark btn-swiggy" href="https://www.swiggy.com/city/muzaffarpur/the-riwayat-kitchen-muz-muzaffarpur-city-rest1406656?source=sharing" target="_blank" rel="noopener">🛵 Swiggy</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+      document.body.appendChild(backdrop);
+      document.body.style.overflow = 'hidden';
+
+      // Close on backdrop click
+      backdrop.addEventListener('click', e => {
+        if (e.target === backdrop) closeDishModal();
+      });
+
+      // Close button
+      backdrop.querySelector('.dish-modal-close').addEventListener('click', closeDishModal);
+    }
+
+    function closeDishModal() {
+      const backdrop = document.querySelector('.dish-modal-backdrop');
+      if (backdrop) {
+        backdrop.style.animation = 'fadeIn .15s ease reverse';
+        setTimeout(() => {
+          backdrop.remove();
+          document.body.style.overflow = '';
+        }, 140);
+      }
+    }
+
+    // ESC key to close
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDishModal();
+    });
+
+    // Attach click listeners to all menu cards & combo cards
+    document.querySelectorAll('.mcard[data-name], .combo-card[data-name]').forEach(card => {
+      card.addEventListener('click', e => {
+        // Don't open modal if clicking a link inside
+        if (e.target.closest('a')) return;
+        const name = card.dataset.name;
+        const desc = card.dataset.desc;
+        const price = card.dataset.price;
+        const img = card.dataset.img;
+        openDishModal(name, desc, price, img);
+      });
+      // Also open on Enter key for accessibility
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter') card.click();
+      });
+    });
+  </script>
+
+</body>
+
+</html>
